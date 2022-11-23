@@ -1,0 +1,43 @@
+$colorCircle1:  #d7ccf0;
+$colorCircle2:  #b30147;
+
+.loader_movieInfo{
+    min-height: 45vh;
+    display: flex;
+    align-items: flex-end;
+}
+.svgLoader{
+    width: 100px;
+    height: 100px;
+    justify-self: center
+}
+.circle_1{
+    fill: none;
+    stroke: $colorCircle1;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 21;
+    stroke-dashoffset: 0;
+    animation: circle1 2s infinite linear;
+    
+    @keyframes  circle1{
+        to{
+            stroke-dashoffset: 83;
+        }
+    }
+}
+.circle_2{
+    fill: none;
+    stroke:$colorCircle2;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 31;
+    stroke-dashoffset: 0;
+    animation: circle2 2s infinite linear;
+    
+    @keyframes  circle2{
+        to{
+            stroke-dashoffset: -123;
+        }
+    }
+}

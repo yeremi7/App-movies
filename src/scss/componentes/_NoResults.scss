@@ -1,0 +1,30 @@
+.container_no_results{
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.noResults{
+    padding: 7px 0px;
+    font-size: 27px;
+    color: $colorText;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.line{
+    position: absolute;
+    width: 120px;
+    bottom: 0;
+    border-bottom: 1px solid $colorText;
+}
+
+.line:nth-child(2){
+    width: 80px;
+    bottom: -10px;
+    border-bottom: 1px solid $colorText;
+}
+.line:nth-child(3){
+    width: 50px;
+    bottom: -20px;
+    border-bottom: 1px solid $colorText;
+}

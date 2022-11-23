@@ -1,0 +1,111 @@
+.container_moviesInfo{
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title_movieInfo{
+    margin-top: 36px;
+    transition: box-shadow .5s linear ;
+
+    a{
+        font-size: 35px;
+        font-weight: 700;
+        color: #ebe6f7;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073,
+                     0 0 50px #1c005a, 0 0 60px #1c005a, 0 0 70px #1c005a;
+    }
+}
+.card_movieInfo{
+    height: 100%;
+    margin-top: 40px;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.img_poster{
+    width: 100%; 
+    height: 450px;
+    border-radius: 10px;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: imgAnimate 1.5s .1s forwards linear;  
+
+    @keyframes imgAnimate {
+        0%{
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        50%{
+            transform: translateX(-50%);
+            opacity: 0;
+        }
+        60%{
+            transform: translateX(-30%);
+            opacity: .5;
+        }
+        100%{
+            transform: translateX(0%);
+            opacity: 1;
+        }
+    }
+}
+.content_info{
+    width: 100%;
+    transform-origin: center left;
+    transform: scale(0);
+    animation: textAnimate 1.5s 1s forwards linear;  
+
+    @keyframes textAnimate {
+        0%{
+            transform: scale(0);;
+            opacity: 0;
+        }
+        50%{
+            transform: scale(.5);;
+            opacity: 0;
+        }
+        60%{
+            transform: scale(.7);;
+            opacity: .5;
+        }
+        100%{
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    p{
+        margin-top: 12px;
+        font-size: 14px;
+        font-weight: 300;
+        color: #ebe6f7;
+        line-height: 1.4;
+        letter-spacing: .6px;
+        font-family: 'Source Sans Pro', sans-serif;
+
+        strong{
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .3px;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+}
+.size{
+    max-width: 300px;
+    margin: 15px;
+}
+
+@media screen and (max-width: 700px) {
+    .img_poster{
+        width: 100%;
+        height: 100%;
+    }
+}

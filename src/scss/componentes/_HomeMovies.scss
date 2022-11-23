@@ -1,0 +1,175 @@
+$colorFondo: #050012;
+$colorCard:  #0b0024;
+$colorBtn:   #b30147;
+$colorText:  #ebe6f7;
+
+.container_header{
+    width: 100%;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+    margin-top: 55px;
+    font-size: 35px;
+    color: $colorText;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073,
+                 0 0 50px #1c005a, 0 0 60px #1c005a, 0 0 70px #1c005a;
+}
+.inputSearchMovies{
+    margin-top: 37px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    border-radius: 50px;
+    padding: 10px 18px;
+    width: 234px;
+    color: #bab3cc;
+    background-color: #050012;
+    box-shadow: 0px 0px 2px #bab3cc;
+    font-family: 'Montserrat', sans-serif;
+
+    &::placeholder{
+        font-size: 14px;
+        color: #bab3cc;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+.container_movies{
+    width: 100%;
+    margin-top: 60px;
+    padding-bottom: 27px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: minmax(200px , 1245px);
+
+    h1{
+        margin-top: 70px;
+        color: $colorText;
+        text-align: center;
+    }
+}
+.container_moviesCard{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit , 200px);
+    gap: 30px 30px;
+
+    ul{
+        cursor: pointer;
+
+        li{
+            position: relative;
+            list-style: none;
+            transition: clip-path .7s .2s ease-in , opacity .5s .8s ease-in, background-color .2s linear ;
+            
+            img{
+                width: 100%;
+                height: 300px;
+                color: $colorText;
+                display: block;
+                border-radius: 5%;
+                box-shadow: 2px 2px 2px #121212 ;
+            }
+
+            .clip{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $colorCard;
+                border-radius: 4%;
+                clip-path: circle(.1% at left bottom);
+                box-shadow: inset -0px -2px 1px $colorBtn;
+                transition: inherit ;
+                
+                a{
+                    padding: 6px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: $colorText;
+                    text-decoration: none;
+                    opacity: 1;
+                    border-radius: 5%;
+                    background-color: $colorBtn;
+                    font-family: 'Martel', serif;
+                    transition: inherit ;
+                    
+                }
+                
+            }
+
+            .openClip{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $colorCard;
+                border-radius: 4%;
+                clip-path: circle(170% at left bottom);
+                box-shadow: inset -0px -2px 1px $colorBtn;
+                transition: inherit ;
+
+                a{
+                    padding: 6px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: $colorText;
+                    text-decoration: none;
+                    opacity: 1;
+                    border-radius: 5%;
+                    background-color: $colorBtn;
+                    font-family: 'Martel', serif;
+                    transition: inherit ;
+
+                    &:hover{
+                        background-color: #b30148ce;
+                    }
+                    &:active{
+                        background-color: $colorBtn;
+                    }
+                }
+            }
+        }
+        
+        h6{
+            margin-top: 17px;
+            font-size: 14px;
+            font-weight: 400;
+            color: $colorText;
+            text-align: center;
+            font-family: 'Martel', serif;
+        }
+    }
+}
+
+@media screen and (max-width: 465px) {
+    .container_movies{
+        margin-top: 80px;
+    }
+    .container_moviesCard{
+        grid-template-columns: repeat(auto-fit, 225px);
+
+        ul{
+            li{
+                img{
+                    width: 100%;
+                    height: 335px;
+                }
+            }
+        }
+    }
+}

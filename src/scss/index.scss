@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #050012;
+}
+ 
+@import './componentes/HomeMovies';
+@import './componentes/MovieInfo';
+@import './componentes/Loader';
+@import './componentes/NoResults';
+
+
+ 
