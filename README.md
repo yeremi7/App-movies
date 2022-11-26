@@ -1,6 +1,6 @@
 # App Movies
 
-Esta app consiste en mostrar la informacion de la pelicula lo primordial como el title, genero, overview, etc. Las movies o los poster vienen de una API externa de themoviedb.org que ofrece este servicio para los desarrolladores.
+Esta app consiste en mostrar la informacion de la pelicula lo primordial como el title, genero, overview, etc. Las movies o los poster vienen de una API externa de themoviedb.org que ofrece este servicio para los desarrolladores. [Link](https://movies-22888b.netlify.app/)
 
 ## Los conocimientos que implemente fueron:
 
